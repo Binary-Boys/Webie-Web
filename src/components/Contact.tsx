@@ -1,22 +1,24 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import React, { useState } from "react";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -28,17 +30,20 @@ const Contact = () => {
             Get in <span className="text-[#EEAF08]">Touch</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Need a project? Let's discuss how we can help bring your ideas to life.
+            Need a project? Let's discuss how we can help bring your ideas to
+            life.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="bg-[#202020]/50 backdrop-blur-lg rounded-2xl p-8 border border-[#EEAF08]/20">
-            <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">
+              Contact Information
+            </h3>
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <Mail className="h-6 w-6 text-[#EEAF08]" />
-                <span className="text-gray-300">vipindas233@gmail.com</span>
+                <span className="text-gray-300">webie.work@gmail.com</span>
               </div>
               <div className="flex items-center space-x-4">
                 <Phone className="h-6 w-6 text-[#EEAF08]" />
@@ -54,12 +59,20 @@ const Contact = () => {
             </div>
 
             <div className="mt-8">
-              <h4 className="text-xl font-semibold text-white mb-4">Follow Us</h4>
+              <h4 className="text-xl font-semibold text-white mb-4">
+                Follow Us
+              </h4>
               <div className="flex space-x-4">
-                <a href="https://wa.me/9562845383" className="text-gray-300 hover:text-[#EEAF08] transition-colors">
+                <a
+                  href="https://wa.me/9562845383"
+                  className="text-gray-300 hover:text-[#EEAF08] transition-colors"
+                >
                   Whatsapp
                 </a>
-                <a href="#" className="text-gray-300 hover:text-[#EEAF08] transition-colors">
+                <a
+                  href="#"
+                  className="text-gray-300 hover:text-[#EEAF08] transition-colors"
+                >
                   Instagram
                 </a>
               </div>
@@ -68,7 +81,10 @@ const Contact = () => {
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-300">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-300"
+              >
                 Name
               </label>
               <input
@@ -82,7 +98,10 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-300">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-300"
+              >
                 Email
               </label>
               <input
@@ -96,7 +115,10 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-300">
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-gray-300"
+              >
                 Message
               </label>
               <textarea
