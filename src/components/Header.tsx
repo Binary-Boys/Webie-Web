@@ -12,7 +12,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <Code2 className="h-8 w-8 text-[#EEAF08]" />
-            <span className="ml-2 text-xl font-bold text-white">Webie</span>
+            <span className="ml-2 text-xl font-bold text-white">Valaxia</span>
           </div>
           
           <nav className="hidden md:flex space-x-8">
